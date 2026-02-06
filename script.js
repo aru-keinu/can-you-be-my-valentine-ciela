@@ -114,6 +114,11 @@ function setRandomPosition(element) {
     element.style.animationDuration = 10 + Math.random() * 20 + 's';
 }
 
+// Go to 2nd html file
+function goToCard() {
+    window.location.href = "card.html";
+}
+
 // Function to show next question
 function showNextQuestion(questionNumber) {
     document.querySelectorAll('.question-section').forEach(q => q.classList.add('hidden'));
