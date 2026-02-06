@@ -26,7 +26,7 @@ function App() {
   const handleYes = () => {
     setIsValentine(true);
   };
-
+}
 
 // Validate configuration
 function validateConfig() {
