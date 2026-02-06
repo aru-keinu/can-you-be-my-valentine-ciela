@@ -1,6 +1,33 @@
 // Initialize configuration
 const config = window.VALENTINE_CONFIG;
 
+const NO_PHRASES = [
+  "No 💔",
+  "Pretty please? 🥺",
+  "But we'd be so cute together! 💕",
+  "One more chance, pookie?",
+  "Don't break my heart :(",
+  "What about a maybe?",
+  "Please don't do this to me, I'm fragile",
+];
+
+function App() {
+  const [noClicks, setNoClicks] = useState(0);
+  const [isValentine, setIsValentine] = useState(false);
+  const yesButtonSize = (noClicks * 20) + 16;
+
+  const firstImg = "https://media.tenor.com/VIChDQ6ejRQAAAAj/jumping-bear-hearts-no-png.gif";
+  const secondImg = "https://media.tenor.com/f1xnRxTRxLAAAAAj/bears-with-kisses-bg.gif";
+
+  const handleNo = () => {
+    setNoClicks(prev => prev + 1);
+  };
+
+  const handleYes = () => {
+    setIsValentine(true);
+  };
+
+
 // Validate configuration
 function validateConfig() {
     const warnings = [];
